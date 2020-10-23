@@ -1,0 +1,65 @@
+.chat-block-wrapper(class="hidden h-screen overflow-hidden")
+    .chat-block-cont(class="")
+        .chat-header-wrapper(style="height:40px",class="border-b-2 border-indigo-700 text-sm bg-gray-100")
+            .chat-header-container(class="flex justify-between h-full p-2")
+                .menu-wrapper Menu
+                .logo-wrapper KeepMe.in
+                .setting-wrapper Setting
+
+        .chat-history-wrapper(class="absolute w-full overflow-y-scroll ",style="top:40px;left:0px;bottom:50px;") 
+            .chat-templates
+                .message-template
+                    //- Left message Template
+                    .message-wrapper#leftTextTemplate(class="hidden m-1")
+                        .message-container(class='p-1 flex items-center')
+                            .message(class='bg-white  border-gray border-2 text-gray-900 rounded p-1 relative text-sm  w-4/5')
+                                span.message-text
+                                    | this is simple way to express yourself 
+                                    | Lorem ipsum dolor sit, amet consectetur adipisicing elit
+                            .option-details
+                                button(class='p-2 font-bold text-2xl') :
+
+                        .message-time(class="text-xs ml-1 text-gray-600")
+                            | 26th sep 1996    
+                            
+                    //- right message Template
+                    .message-wrapper#rightTextTempalte(class="hidden m-1")
+                        .message-container(class='p-1 flex items-center')
+                            .option-details(class='ml-auto') 
+                                button(class='p-2 font-bold text-2xl') :
+                            .message(class='border-2 rounded p-1 bg-gray-200 relative text-sm  w-4/5')
+                                span.message-text
+                                    | this is simple way to express yourself 
+                                    | Lorem ipsum dolor sit, amet consectetur adipisicing elit
+
+                        .message-time(class="text-xs ml-1 text-right text-gray-600")
+                            | 26th sep 1996    
+
+                    //- left image template
+                    .message-wrapper#leftImageTemplate(class='hidden m-1')
+                        .message-container(class='p-1 flex items-center')
+                            .message(class='bg-gray-400 p-1 relative text-sm  w-3/5')
+                                span.message-image
+                                    img(src='https://dummyimage.com/600x400/000/fff')
+                            .option-details
+                                button(class='p-2 font-bold text-2xl') :
+
+                    //- right image message
+                    .message-wrapper#rightImageTemplate(class='hidden m-1')
+                        .message-container(class='p-1 flex items-center')
+                            .option-details(class='ml-auto')
+                                button(class='p-2 font-bold text-2xl') :
+                            .message(class='bg-gray-400 p-1 relative text-sm  w-3/5')
+                                span.message-image
+                                    img(src='https://dummyimage.com/600x400/000/fff')
+
+        .chat-message-creator(style="height:50px;bottom:0px;",class="absolute flex w-full overflow-hidden border-2")
+            button
+                img(src="/public/assets/svg/attach_file-black-18dp.svg",style="height:30px")
+            textarea(class="flex-1 w-4/5 p-1 pt-1 pl-2 mr-1 outline-none overflow-xscroll",style="height:50px;")
+            button(class="mr-1") send
+
+
+                
+            
+        

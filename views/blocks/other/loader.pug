@@ -1,0 +1,25 @@
+.loader-wrapper#app-loader(class="flex hidden h-screen overflow-hidden")
+    .loader-animation
+    .loader-container(class="m-auto text-center") 
+        .loader-circle(class='flex m-auto mb-2 rounded',style='')
+            .lader-inner-circle(class='hidden m-auto',style='height:20px;width:20px;background:gray;')
+
+        .loading-text(class='font-mono tracking-widest') Loading
+style(type="Text/css").
+    .loader-circle{
+        height:50px;
+        width:50px;
+        animation-name:OuterCircle;
+        animation-duration:2s;
+        animation-iteration-count:infinite;
+        animation-direction:normal;
+        background-image: linear-gradient(to right, #4c51bf, #ae42a9, #e14082, #f55e59, #ed8936);
+    }
+    @keyframes OuterCircle{
+        from{
+        background-image: linear-gradient(to right, #4c51bf, #ae42a9, #e14082, #f55e59, #ed8936);
+        }
+        to{
+            transform:rotate(90deg);
+        }
+    }

@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport",content="width=device-width, initial-scale=1.0, user-scalable=no ")
+        title Welcome
+        link(rel="Stylesheet" type="text/css" href="public/css/output.css")
+        
+    body(class="overflow-hidden",style="font-family:'roboto'")
+        h1 #{value}
+        include blocks/chat.pug
+        include blocks/welcome.pug
+        include blocks/qrcode.pug
+        include blocks/textcode.pug
+        include blocks/join.pug
+
+    
+
+        //- Other Block 
+        include blocks/other/loader.pug
+        include blocks/other/success.pug
+
+        script(src="/public/js/main.js",type="text/javascript" language="javascript")
+        link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap",rel="stylesheet")
+        
+    

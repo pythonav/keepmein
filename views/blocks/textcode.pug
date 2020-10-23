@@ -1,0 +1,12 @@
+.textcode-wrapper#app-textcode(class="hidden flex h-screen")
+    .textcode-connection-cont(class="m-auto")
+        .textcode-title(class="hidden") Enter Following Code to Connect Device
+        .textcode-generate-title Generate Code to Connect
+        .textcode-text-code(class="p-2 mt-2 mb-2 text-3xl hidden text-gray-800 font-bold tracking-widest text-center bg-gray-300 rounded ")  
+            | ########
+        .textcode-generate-btn
+            button(class="w-full p-2 bg-indigo-700 text-white ") Generate Code
+        .textcode-red-message(class="hidden text-center text-red-500") this text code is valid till only 
+            span.textcode-time 120
+            span  seconds
+        .textcode-goto-qr(class="mt-2 text-center text-indigo-700") | or scan the qr code to connect
